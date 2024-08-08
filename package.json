@@ -7,9 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "copy-env": "node copy-env.js",
-  "email": "npm run copy-env && email dev --dir src/email --port 3001"
-
+    "postinstall": "prisma generate"
   },
   "dependencies": {
     "@headlessui/react": "^2.1.2",
@@ -34,7 +32,7 @@
     "eslint": "^8",
     "eslint-config-next": "14.2.4",
     "postcss": "^8",
-    "prisma": "^5.16.1",
+    "prisma": "^5.18.0",
     "tailwindcss": "^3.4.1",
     "ts-node": "^10.9.2",
     "typescript": "^5"
