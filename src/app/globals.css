@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+    max-width: 1350px;
+}
+
+.site-header.fix-menu-desktop {
+    background-color: #fff;
+    box-shadow: 0 0px 3px 0px rgba(0, 0, 0, 0.2);
+    transition: height 0.3s, background-color 0.3s;
+}
+
+.hov-btn1:hover {
+    border-color: #222;
+    background-color: #222;
+    color: #fff;
+}
+
+.main-menu li a {
+    transition: .2s all ease-in-out;
+}
+
+.main-menu li.active-menu a,
+.main-menu li a:hover {
+    color: #6c7ae0;
+}
+
+.wrap-icon-header .icon-header-item span {
+    font-family: Poppins-Regular;
+    font-size: 12px;
+    color: #fff;
+    line-height: 15px;
+    text-align: center;
+    display: block;
+    position: absolute;
+    top: -7px;
+    right: -7px;
+    min-width: 15px;
+    height: 15px;
+    padding: 0 3px;
+    background-color: #717fe0;
+}
+
+.group .card-block {
+    transition: .3s all ease-in-out;
+}
+
+.group:hover .card-block {
+    background-color: rgba(103, 117, 214, 0.8);
+}
+
+.group .card-block h2 {
+    color: #333333;
+}
+
+.group .card-block h2 {
+    color: #555555;
+}
+
+.group:hover .card-block h2,
+.group:hover .card-block p {
+    color: #fff;
+}
+
+.group:hover .group-hover\:opacity-100 {
+    border-bottom: 2px solid;
+}
+
+.products-tabs ul li a {
+    transition: .2s all ease-in-out;
+}
+
+.products-tabs ul li a:hover,
+.products-tabs ul li a.active {
+    border-bottom: 1px solid #797979;
+}
+
+.products-tabs .card-block .relative:hover .btn button,
+.products-tabs .heart-block:hover .hover-img {
+    opacity: 1;
+}
+
+footer .footer-navigation li a:hover {
+    color: #717fe0;
+}
+
+footer .news-letter form input {
+    border-color: rgba(204, 204, 204, 0.1);
+}
+
+footer .news-letter form input::placeholder {
+    font-size: 15px;
+    line-height: 1.2;
+    color: #b2b2b2;
+    font-family: Poppins, ui-serif;
+}
+
+.hov-btn2,
+.hov-btn3 {
+    transition: .3s all ease-in-out;
+}
+
+.hov-btn2:hover {
+    background-color: #fff;
+    color: #717fe0;
+}
+
+.hov-btn3:hover {
+    background-color: #717fe0;
+}
+
+.search-modal input {
+    height: 120px;
+    border: 2px solid #e6e6e6;
+    /* background: #fff; */
+}
+
+.search-modal input::placeholder,
+.search-modal input {
+    font-family: Poppins, ui-serif;
+    font-size: 50px;
+    line-height: 1.2;
+    color: #333;
+    font-weight: 400;
+    background-color: transparent;
+}
+
+.fade-in-top {
+    animation: fadeInTop 0.3s ease-out;
+}
+
+@keyframes fadeInTop {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fade-left {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.fade-left.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.how-bor2::before,
+.how-bor1::before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    border: 3px solid #ccc;
+    bottom: -21px;
+}
+
+.how-bor1::before {
+    left: -21px;
+}
+
+.how-bor2::before {
+    right: -21px;
+}
+
+.menu-hidden {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.menu-visible {
+    transform: translateX(0);
+    transition: transform 0.3s ease;
+}
+
+.cart {
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.cart.open {
+    transform: translateX(0);
+}
+
+.cart li .object-cover::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: all 0.3s;
+    opacity: 0;
+}
+
+.cart li .object-cover:hover::after {
+    opacity: 1;
+}
+
+@media screen and (max-width: 1355px) {
+    .container {
+        max-width: 100%;
+        padding-left: 33px;
+        padding-right: 33px;
+    }
+}
