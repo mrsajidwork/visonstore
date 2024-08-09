@@ -1,6 +1,6 @@
 import React from 'react'
-import { ProductCard } from '@/components/ProductCard'
 import { getMostPopularProducts } from '../page'
+import { ProductCard } from '../../../components/ProductCard';
 
 
 const Shop = () => {

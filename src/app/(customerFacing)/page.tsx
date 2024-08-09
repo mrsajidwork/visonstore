@@ -1,9 +1,12 @@
-import HeroSection from "@/components/HeroSection";
-import HomeCategories from "@/components/HomeCategories";
+
 import Shop from "./shop/page";
-import db from "@/db/db";
-import { cache } from "@/lib/cache";
+
+
 import "../globals.css";
+import HeroSection from "../../components/HeroSection";
+import HomeCategories from "../../components/HomeCategories";
+import db from "../../db/db";
+import { cache } from "../../lib/cache";
 
 export default function Home() {
   return (

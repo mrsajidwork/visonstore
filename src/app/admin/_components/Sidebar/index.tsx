@@ -4,9 +4,10 @@ import React, { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import useLocalStorage from "@/hooks/useLocalStorage";
+
 import SidebarItem from "./SidebarItem";
 import ClickOutside from "../ClickOutside";
+import useLocalStorage from "../../../../hooks/useLocalStorage";
 
 interface SidebarProps {
   sidebarOpen: boolean;
@@ -363,7 +364,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
             <Image
               width={176}
               height={32}
-              src={"/images/logo/logo.svg"}
+              src={"/image/admin-logo.png"}
               alt="Logo"
               priority
             />

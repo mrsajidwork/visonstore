@@ -1,13 +1,15 @@
 "use client";
 
 import "../globals.css";
-import NavBar from "@/components/NavBar";
-import Footer from "@/components/Footer";
+
 import ClientFade from "../../components/ClientFade";
 import { SearchModal } from "../../components/SearchModal";
 import { CartModal } from "../../components/CartModal";
 import { useState, useEffect } from "react";
-import Loader from "@/components/Loader";
+import NavBar from "../../components/NavBar";
+import Loader from "../../components/Loader";
+import Footer from "../../components/Footer";
+
 
 
 export default function RootLayout({
