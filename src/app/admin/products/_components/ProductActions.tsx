@@ -64,7 +64,7 @@ export function DeleteDropdownItem({
 
   return (
     <button
-      className="hover:text-primary"
+      className="hover:text-primary cursor-pointer"
       disabled={disabled || isPending}
       onClick={() => {
         startTransition(async () => {

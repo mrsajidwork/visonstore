@@ -117,6 +117,8 @@ export async function toggleProductAvailability(id: string, isAvailableForPurcha
 
 export async function deleteProduct(id: string) {
     const product = await db.product.delete({ where: { id } });
+
+    console.log(product);
      
     if(product === null) {
         return { error: "Product not found" };
