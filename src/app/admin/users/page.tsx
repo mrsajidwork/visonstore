@@ -21,7 +21,7 @@ async function UsersTable() {
   const users = await getUsers();
 
   if (users.length === 0) {
-    return <div>No customers found</div>;
+    return <DefaultLayout><p>No Customers found</p></DefaultLayout>;
   }
   return (
     <>

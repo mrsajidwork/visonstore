@@ -6,7 +6,7 @@ import Image from "next/image";
 export default async function OrdersPage() {
   const orders = await getOrders();
 
-  if (orders.length === 0) return <p>No sales found</p>;
+  if (orders.length === 0) return <DefaultLayout><p>No sales found</p></DefaultLayout>;
 
   return (
     <DefaultLayout>

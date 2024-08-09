@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import siteLogo from "/public/image/site-logo.webp";
+import siteLogo from "/public/image/site-logo.png";
 import searchIcon from "/public/image/search-icon.png";
 import cartIcon from "/public/image/cart-icon.png";
 import heartIcon from "/public/image/heart-icon.png";
