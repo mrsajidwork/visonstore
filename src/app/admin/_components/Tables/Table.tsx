@@ -117,7 +117,7 @@ const Table = async () => {
                     />
                     <DeleteDropdownItem
                       id={product.id}
-                      disabled={product._count.orders > 0}
+                      // disabled={product._count.orders > 0}
                     />
                     <Link
                       download

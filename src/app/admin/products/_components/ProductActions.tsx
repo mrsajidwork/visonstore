@@ -54,10 +54,10 @@ export function ActivateDeactivateProduct({
 
 export function DeleteDropdownItem({
   id,
-  disabled,
+  // disabled,
 }: {
   id: string;
-  disabled: boolean;
+  // disabled: boolean;
 }) {
   const [isPending, startTransition] = useTransition();
   const router = useRouter();
@@ -65,7 +65,7 @@ export function DeleteDropdownItem({
   return (
     <button
       className="hover:text-primary cursor-pointer"
-      disabled={disabled || isPending}
+      // disabled={disabled || isPending}
       onClick={() => {
         startTransition(async () => {
           await deleteProduct(id);
