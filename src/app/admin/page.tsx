@@ -5,6 +5,8 @@ import Table from "./_components/Tables/Table";
 import { Metadata } from "next";
 import CardDataStats from "./_components/CardDataStats";
 
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title: "Dashboard",
   description: "Admin Dashboard",
