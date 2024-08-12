@@ -120,13 +120,12 @@ const NavBar = () => {
           </div> */}
 
           <div className="md:hidden flex">
-            <div
+            {/* <div
               className="icon-header-item mr-6 md:mr-[33px]"
               onClick={toggleSearchModal}
             >
-              {/* <img className="cursor-pointer" src="../src/image/search-icon.png" alt=""> */}
               <Image src={searchIcon} alt="Search Icon" />
-            </div>
+            </div> */}
             <button
               id="menu-button"
               className="focus:outline-none"
@@ -164,12 +163,11 @@ const NavBar = () => {
                 <NavLink href="/contact-us">Contact</NavLink>
               </li>
             </ul>
-            <div className="wrap-icon-header md:hidden">
+            {/* <div className="wrap-icon-header md:hidden">
               <div
                 className="icon-header-item mb-[17px] relative w-max"
                 data-notify="2"
               >
-                {/* <img className="cursor-pointer" src="../src/image/cart-icon.png" alt=""> */}
                 <Image src={cartIcon} alt="Picture of the author" />
                 <span>2</span>
               </div>
@@ -178,11 +176,10 @@ const NavBar = () => {
                 className="icon-header-item relative w-max inline-block"
                 data-notify="0"
               >
-                {/* <img src="../src/image/heart-icon.png" alt=""> */}
                 <Image src={heartIcon} alt="Picture of the author" />
                 <span>0</span>
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
       </header>
