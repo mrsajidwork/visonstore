@@ -10,30 +10,33 @@ import NavBar from "../../components/NavBar";
 import Loader from "../../components/Loader";
 import Footer from "../../components/Footer";
 
-
-
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
   const [loading, setLoading] = useState<boolean>(true);
-
-  // const pathname = usePathname();
 
   useEffect(() => {
     setTimeout(() => setLoading(false), 1000);
   }, []);
 
+  if (loading) {
+    return (
+      <>
+        <Loader />
+      </>
+    );
+  }
+
   return (
     <>
-      <ClientFade />
       <NavBar />
-      {loading ? <Loader /> : children}
+      {children}
       <Footer />
       <SearchModal />
       <CartModal />
+      <ClientFade />
     </>
   );
 }
