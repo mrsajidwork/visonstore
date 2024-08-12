@@ -72,7 +72,7 @@ const NavBar = () => {
               </li>
             </ul>
           </div>
-          <div className="wrap-icon-header md:flex md:w-96 justify-start md:justify-end hidden">
+          {/* <div className="wrap-icon-header md:flex md:w-96 justify-start md:justify-end hidden">
             <div
               className="icon-header-item mr-4 md:mr-[33px] cursor-pointer"
               onClick={toggleSearchModal}
@@ -117,7 +117,7 @@ const NavBar = () => {
               />
               <span>0</span>
             </a>
-          </div>
+          </div> */}
 
           <div className="md:hidden flex">
             <div
