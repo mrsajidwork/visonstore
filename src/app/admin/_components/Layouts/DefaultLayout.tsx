@@ -2,14 +2,26 @@
 import React, { useState, ReactNode } from "react";
 import Sidebar from "../Sidebar";
 import Header from "../Header";
-
+import { useEffect } from "react";
+import Loader from "@/components/Loader";
 
 export default function DefaultLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const [loading, setLoading] = useState<boolean>(true);
+
+  useEffect(() => {
+    setTimeout(() => setLoading(false), 1000);
+  }, []);
+
   const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  if (loading) {
+    return <Loader />;
+  }
+
   return (
     <>
       {/* <!-- ===== Page Wrapper Start ===== --> */}
