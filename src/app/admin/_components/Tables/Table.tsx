@@ -1,3 +1,5 @@
+"use server";
+
 import db from "@/db/db";
 import Link from "next/link";
 import {
