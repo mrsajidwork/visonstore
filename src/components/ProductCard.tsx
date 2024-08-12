@@ -1,14 +1,17 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import Image from "next/image";
 import heartIconOne from "/public/image/icon-heart-01.webp";
 import heartIconTwo from "/public/image/icon-heart-02.webp";
-import Link from "next/link";
+import ProductQuickView from "./ProductQuickView";
 
 type ProductCardProps = {
   id: string;
   name: string;
   priceInCents: number;
   imagePath: string;
+  description: string;
 };
 
 export const ProductCard = ({
@@ -16,16 +19,31 @@ export const ProductCard = ({
   name,
   priceInCents,
   imagePath,
+  description,
 }: ProductCardProps) => {
+
+  const myProps = {
+    id,
+    name,
+    priceInCents,
+    imagePath,
+    description,
+  };
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+
   return (
+    <>
     <div className="card-block cursor-pointer font-display fade-in" key={id}>
       <div className="lg:h-[395px] h-auto overflow-hidden relative">
-        {/* <img src="/public/image/product-01.webp" alt="Product 2" className="mb-4 w-full h-full
-                            object-cover transform transition-transform duration-500 hover:scale-110"> */}
         <Image
           src={imagePath}
           alt="Product 2"
-          fill={true}
+          width={500}
+          height={500}
           className="mb-4 w-full h-full
                             object-cover transform transition-transform duration-500 hover:scale-110"
         />
@@ -33,14 +51,9 @@ export const ProductCard = ({
           <button
             className=" flex items-center justify-center bg-white text-grey text-sm
                                     rounded-full py-2 px-7 opacity-0 transition-opacity duration-300 hov-btn1"
+                                    onClick={openModal}
           >
             Quick View
-          </button>
-          <button
-            className="mt-3 flex items-center justify-center bg-white text-grey text-sm
-                                    rounded-full py-2 px-7 opacity-0 transition-opacity duration-300 hov-btn1"
-          >
-            <Link href={`/products/${id}/purchase`}>Purchase</Link>
           </button>
         </div>
       </div>
@@ -60,5 +73,13 @@ export const ProductCard = ({
         </div>
       </div>
     </div>
+    <ProductQuickView product={{
+        id: "",
+        name: "",
+        priceInCents: 0,
+        imagePath: "",
+        description: "",
+      }} modalStatus={isModalOpen} onClose={closeModal} {...myProps} />
+    </>
   );
 };

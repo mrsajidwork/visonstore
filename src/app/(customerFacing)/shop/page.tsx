@@ -9,7 +9,7 @@ const Shop = () => {
     <div className="products-tabs pt-32 pb-24">
         <div className="container mx-auto">
             <div className="w-full">
-                <h3 className="uppercase text-4xl font-display text-brown font-bold mb-4 fade-left">Product Overview
+                <h3 className="uppercase text-4xl font-display text-brown font-bold mb-4 fade-left">Latest Products
                 </h3>
                 <ul className="flex font-display mb-12 fade-left" id="tabs">
                     <li className="mr-8 tab-li">
