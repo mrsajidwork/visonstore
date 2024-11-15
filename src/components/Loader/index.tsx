@@ -14,10 +14,12 @@ type AutoWidthLoaderProps = {
   width: number;
 };
 
-export function AutoWidthLoader({ height, width }: AutoWidthLoaderProps) {
+const AutoWidthLoader = ({ height, width }: AutoWidthLoaderProps) => {
   return (
-    <div className="flex items-center justify-center">
+    <div className="flex">
       <div className={`h-${height} w-${width} animate-spin rounded-full border-4 border-solid border-primary border-t-transparent`}></div>
     </div>
   );
 }
+
+export { AutoWidthLoader };

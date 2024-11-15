@@ -120,7 +120,7 @@ function Form({
         className="my-5 rounded-full inline-block bg-indigo px-11 py-3.5 text-sm font-medium text-white uppercase hov-btn1"
         disabled={stripe == null || elements == null || isLoading}
       >
-        {isLoading ? "Purchasing..." : `Purchase for $${priceInCents}`}
+        {isLoading ? "Buying..." : `Buy Now for $${priceInCents}`}
       </button>
       {errorMessage && <p className="text-red-500">{errorMessage}</p>}
     </form>
