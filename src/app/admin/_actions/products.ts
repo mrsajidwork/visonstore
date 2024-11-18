@@ -21,7 +21,7 @@ const addSchema = z.object({
   image: imageScheme.refine((file) => file.size < 1024 * 1024 * 5, { message: "Image size should be less than 5MB" }),
 });
 
-export async function addProduct(prevState: unknown, formData: FormData) {
+export async function addProduct(formData: FormData) {
     const result = addSchema.safeParse(Object.fromEntries(formData.entries()));
     if (!result.success) {
         return result.error.formErrors.fieldErrors;
@@ -29,8 +29,8 @@ export async function addProduct(prevState: unknown, formData: FormData) {
 
     const data = result.data;
 
-    await fs.mkdir("products", { recursive: true });
-    const filePath = `products/${crypto.randomUUID()}-${data.file.name}`;
+    await fs.mkdir("public/products", { recursive: true });
+    const filePath = `public/products/${crypto.randomUUID()}-${data.file.name}`;
     await fs.writeFile(filePath, new Uint8Array(await data.file.arrayBuffer()));
 
     await fs.mkdir("public/products", { recursive: true });

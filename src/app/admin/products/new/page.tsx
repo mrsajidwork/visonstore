@@ -9,7 +9,8 @@ import Link from "next/link";
 
 export default function ProductForm({ product, formTitle }: { product?: Product | null, formTitle: string }) {
   const [error, action] = useFormState(
-    product == null ? addProduct : updateProduct.bind(null, product.id),
+    (state: { name?: string[]; priceInCents?: string[]; description?: string[]; file?: string[]; image?: string[] } | { error: string }, formData: FormData) => 
+      product == null ? addProduct(formData) : updateProduct(product.id, state, formData),
     {}
   );
   const [priceInCents, setPriceInCents] = useState<number | undefined>(
